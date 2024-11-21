@@ -7,7 +7,8 @@ public class Question10 {
         // - Switch, belirli bir değişkenin değerine göre farklı kod bloklarını çalıştırır.
         // - Kullanışlı bir örnek: Haftanın günlerini yazdırma.
 
-        int day = 3;
+        int day = -8;
+
         switch (day) {
             case 1 -> System.out.println("Pazartesi");
             case 2 -> System.out.println("Salı");
@@ -17,6 +18,14 @@ public class Question10 {
             case 6 -> System.out.println("Cumartesi");
             case 7 -> System.out.println("Pazar");
             default -> System.out.println("Geçersiz gün");
+        }
+
+        if (day ==1){
+            System.out.println("Pazartesi");
+        }else if (day ==2){
+            System.out.println("Salı");
+        }else {
+            System.out.println("hepsi kabul");
         }
     }
 }

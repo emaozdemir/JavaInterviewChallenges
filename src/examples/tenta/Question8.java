@@ -2,6 +2,7 @@ package examples.tenta;
 
 public class Question8 {
     public static void main(String[] args) {
+
         // Soru 8: Bir integer değişkeni result olarak tanımlayın. 1'den 5'e kadar
         // olan karelerin toplamını hesaplamak için bir for döngüsü yazın.
         // Açıklama:
@@ -11,6 +12,7 @@ public class Question8 {
         for (int i = 1; i <= 5; i++) {
             result += i * i;
         }
-        System.out.println("Sum of squares (1 to 5): " + result); // Çıktı: 55
+        System.out.println("Result: " + result);
+
     }
 }
