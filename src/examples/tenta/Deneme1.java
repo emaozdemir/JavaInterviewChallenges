@@ -1,6 +1,6 @@
 package examples.tenta;
 
-public class Deneme {
+public class Deneme1 {
 
     // Static kaldırıldı, artık instance değişkenler
     String name;// default degerleri null
@@ -9,7 +9,7 @@ public class Deneme {
     public static void main(String[] args) {
 
         // Deneme sınıfından bir nesne oluşturuluyor
-        Deneme obj = new Deneme(); // Methodlardan bağımsız değişkenleri kontrol etmek için
+        Deneme1 obj = new Deneme1(); // Methodlardan bağımsız değişkenleri kontrol etmek için
 
         // Varsayılan (ilk) değerleri yazdır
         System.out.println("ilk hali: " + obj.name); // null
