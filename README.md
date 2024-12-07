@@ -18,12 +18,19 @@ Java'da metotlar, this anahtar kelimesi, getter/setter yapıları ve statik üye
 Mülakat Soruları:
 Java ile ilgili mülakatlarda sık karşılaşılan konular için açıklayıcı ve uygulamalı çözümler.
 
+
+
+
 🚀 Nasıl Kullanılır?
 Bu projeyi klonlayın:
 bash
 Kodu kopyala
 git clone https://github.com/emaozdemir/JavaInterviewChallenges.git
+
 Bir Java IDE'si kullanarak kodları inceleyin ve çalıştırın.
 Örnekleri sırasıyla takip ederek konular arasında ilerleyin.
+
+
+
 📌 Amaç
 Java dilini öğrenmek ve pekiştirmek isteyenlere rehber olmayı, mülakat hazırlık sürecinde destek olmayı hedefler.
