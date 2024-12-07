@@ -1,45 +1,96 @@
 package lecture_notes.lecture6;
 
 public class L01_Inheritance {
-/*
-# L6.1 - Inheritance
-We Have talked a little bit about <i>inheritance</i> and <i>subclasses</i> so far, but not explained very much what they or how they work. In Java, a class can (instead of being created out of thin air) be derived from another class, it will then gain all of the variables and methods from that class. This is called <i>inheritance</i>, i.e. that one class inherits the traits of another.
+    /*
+     Inheritance
+    ---------------------------------
+    Inheritance (kalıtım), bir sınıfın başka bir sınıftan türetilerek onun özelliklerini
+    ve metotlarını miras almasıdır. Bu, kod tekrarını azaltır ve nesne yönelimli programlama
+    prensiplerinden biridir. Java'da kalıtım, polimorfizmi (polymorphism) gerçekleştirmek için
+    kullanılan bir yöntemdir. Polimorfizm, bir değişkenin birden fazla veri tipine ait
+    olabilmesi anlamına gelir. Bu, programın esnekliğini artırır.
 
-Inheritance is one of the ways in which Java implements polymorphism, i.e. that one variable can belong to different data types. Polymorphism can be very useful in handling objects of different types. Inheritance lets the developer impose a certain element of flexibility to how the program handles variable types.
+    ## Subclasses and Superclasses
+    - **Subclass (Alt Sınıf):** Bir sınıftan türeyen sınıftır.
+    - **Superclass (Üst Sınıf):** Alt sınıfın türetildiği sınıftır.
 
-## Subclasses and superclasses
-A class that inherits from another class is called a <i>subclass</i>. Conversely, the class that was inherited from is called a <i>superclass</i> or <i>parent class</i>. Suppose we have a class `Bird`, that defines a set of variables and methods that belong to `Bird`-type objects. We can now create a new class, called `Parrot`, and let it inherit from `Bird`. `Parrot` will then be a subclass to `Bird`, and `Bird` will be the superclass to `Parrot`.
+    Örnek:
+    `Bird` adında bir sınıfımız olduğunu düşünelim. Bu sınıf, `weight` ve `colour` değişkenlerine
+    ve `MakeSound()` ve `Fly()` metotlarına sahip. `Parrot` adında bir alt sınıf oluşturduğumuzda,
+    `Parrot` sınıfı bu değişkenleri ve metotları miras alır. Ancak `Parrot` sınıfı ayrıca
+    kendine özel bir metot tanımlayabilir.
 
-Let's say `Bird` has two variables, `weight` and `colour`. It also has two methods; `MakeSound()` and `Fly()`. We don't need to bother about what these variables and methods do right now. When we create `Parrot` as a subclass to `Bird`, the `Parrot` class will inherit both the `weight` and `colour` variables, and the `MakeSound()` and `Fly()` methods. We don't need to type them out! Conveniently, it will also inherit the type. Any `Parrot` objects we create will be of type `Parrot`, but also of type `Bird`.
+    ### Notlar:
+    - Alt sınıf, üst sınıfın constructor (yapıcı metot) metodunu miras almaz.
+    - `super` anahtar kelimesi, alt sınıfta üst sınıfın constructor veya metoduna erişmek
+      için kullanılır.
 
-The only thing which is <b>not</b> inherited by a subclass is the superclass' constructor(s). Luckily, there's a keyword for accessing the superclass: `super`. More on that soon.
+    ## Kurallar
+    1. Bir sınıf yalnızca bir üst sınıftan miras alabilir.
+    2. Miras alınan alanlar (fields) doğrudan kullanılabilir.
+    3. Alt sınıfta, üst sınıfla aynı ada sahip bir alan tanımlanabilir (bu önerilmez).
+    4. Alt sınıfta, üst sınıfta olmayan yeni alanlar tanımlanabilir.
+    5. Üst sınıftan miras alınan metotlar doğrudan kullanılabilir.
+    6. Üst sınıftaki bir metot, alt sınıfta aynı imzayla yeniden yazılabilir (override).
+    7. Üst sınıftaki bir statik metot, alt sınıfta aynı imzayla gizlenebilir (hiding).
+    8. Alt sınıfta, üst sınıfta olmayan yeni metotlar tanımlanabilir.
+    9. Alt sınıf constructor'ı, üst sınıf constructor'ını çağırabilir (`super` anahtar kelimesiyle).
 
-## Creating a subclass
-Creating a subclass is very simple. As you define your new class, simply add on a statement `extends <Parent Class>` in the class declaration:
-```
-public class Parrot extends Bird {
-    <code specific for the Parrot class>
-}
-```
-Now, `Parrot` <i>extends</i> `Bird`, meaning that it inherits its traits from the superclass `Bird`. Suppose we wanted to add some special functionality to the `Parrot` class, then we can just add it as normal in its code block:
-```
-public class Parrot extends Bird {
-    public void Talk() { };
-}
-```
-In this case, all `Parrot` objects will have the method `Talk()`, and all of the methods from the `Bird` parent class (`MakeSound()` and `Fly()`). However, normal `Bird` objects will not have the `Talk()` method (only Parrots can talk, right?).
+    ## Kod Örnekleri
+    */
 
-## Rules of inheritance
-* A class can inherit one and only one parent class.
-* The inherited fields can be used directly, just like any other fields.
-* You can declare a field in the subclass with the same name as the one in the superclass, thus hiding it (not recommended).
-* You can declare new fields in the subclass that are not in the superclass.
-* The inherited methods can be used directly as they are.
-* You can write a new instance method in the subclass that has the same signature as the one in the superclass, thus overriding it.
-* You can write a new static method in the subclass that has the same signature as the one in the superclass, thus hiding it.
-* You can declare new methods in the subclass that are not in the superclass.
-* You can write a subclass constructor that invokes the constructor of the superclass, either implicitly or by using the keyword super.
+    // Üst Sınıf: Bird
+    public static class Bird {
+        protected double weight;
+        protected String colour;
 
- */
+        // Üst sınıf constructor
+        public Bird(double weight, String colour) {
+            this.weight = weight;
+            this.colour = colour;
+        }
 
+        // Üst sınıf metotları
+        public void MakeSound() {
+            System.out.println("Bird makes sound!");
+        }
+
+        public void Fly() {
+            System.out.println("Bird is flying.");
+        }
+    }
+
+    // Alt Sınıf: Parrot
+    public static class Parrot extends Bird {
+
+        // Alt sınıf constructor, üst sınıf constructor'ını çağırır
+        public Parrot(double weight, String colour) {
+            super(weight, colour); // Üst sınıf constructor'ına erişim
+        }
+
+        // Parrot sınıfına özel metot
+        public void Talk() {
+            System.out.println("Parrot can talk!");
+        }
+    }
+
+    // Ana Metot: Test sınıfı
+    public static class Main {
+        public static void main(String[] args) {
+            // Üst sınıf nesnesi
+            Bird genericBird = new Bird(0.5, "Gray");
+            System.out.println("Generic bird:");
+            genericBird.MakeSound();
+            genericBird.Fly();
+
+            System.out.println();
+
+            // Alt sınıf nesnesi
+            Parrot myParrot = new Parrot(1.2, "Green");
+            System.out.println("Parrot:");
+            myParrot.MakeSound(); // Üst sınıftan miras
+            myParrot.Fly();       // Üst sınıftan miras
+            myParrot.Talk();      // Alt sınıfa özel
+        }
+    }
 }
