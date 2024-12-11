@@ -3,12 +3,12 @@ package lecture_notes.lecture7;
 import java.util.*;
 
 /**
- * Collections sınıfı, farklı türde koleksiyonların kullanımını ve
- * temel metodlarını göstermek için hazırlanmıştır. Koleksiyonların nasıl
- * çalıştığını anlamak için çeşitli örnekler sunar.
- * <p>
+ Collections sınıfı, farklı türde koleksiyonların kullanımını ve
+ temel metodlarını göstermek için hazırlanmıştır. Koleksiyonların nasıl
+ çalıştığını anlamak için çeşitli örnekler sunar.
+
  * Bu sınıf aşağıdaki koleksiyon türlerini açıklar:
- * <p>
+
  * - **Set**: Benzersiz öğeleri tutar ve tekrar eden öğelere izin vermez.
  * Örneğin, bir kullanıcı adları listesi gibi.
  * - **List**: Sıralı bir koleksiyon türüdür. İndekslere göre erişim sağlar ve
@@ -18,7 +18,7 @@ import java.util.*;
  * - **Map**: Anahtar-değer çiftlerinden oluşan bir koleksiyondur. Örneğin, bir
  * şehir adı ve nüfus değerlerini tutmak için kullanılabilir.
  */
-public class Collections {
+public class L01_Collections {
 
     public static void main(String[] args) {
         // 1. Set Örneği
