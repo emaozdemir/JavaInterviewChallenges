@@ -3,7 +3,7 @@ package interview;
 public class SDETSkill03 {
     // SDET için Gerekli Temel Beceriler
 
-/**
+/*
  * Bir SDET (Software Development Engineer in Test) olmak için gereken temel beceriler:
  *
  * 1. **Programlama Dilleri:**

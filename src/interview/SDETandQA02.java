@@ -2,9 +2,8 @@ package interview;
 
 public class SDETandQA02 {
 
-/** 1
+/* 1
  * SDET ve QA Mühendisi Arasındaki Farklar:
- *
  * SDET:
  * - Kodlama ve test işlerini yürütür.
  * - Otomasyon testleri yazar.
@@ -21,9 +20,8 @@ public class SDETandQA02 {
 
 // 2
 
-/**
+/*
  * SDET ve QA Mühendisi Arasındaki Farklar:
- *
  * SDET:
  * - Kodlama ve test işlerini yürütür.
  * - Otomasyon testleri yazar ve test süreçlerini CI/CD'ye entegre eder.

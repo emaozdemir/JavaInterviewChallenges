@@ -3,7 +3,7 @@ package interview;
 public class TestCasePrioritization05 {
     // Soru: Bir Test Döngüsünde Test Vakalarını Nasıl Önceliklendirirsiniz?
 
-    /**
+    /*
      * Soru: Bir Test Döngüsünde Test Vakalarını Nasıl Önceliklendirirsiniz?
      *
      * Cevap:
